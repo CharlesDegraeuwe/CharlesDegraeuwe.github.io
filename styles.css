@@ -1,0 +1,290 @@
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SF-Pro-Regular.woff2") format("woff2"),
+    url("/fonts/SF-Pro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DS-Digital";
+  src: url("../fonts/PixelBus.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Milker";
+  src: url("../fonts/MilkerRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fragment-mono-regular {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fragment-mono-regular-italic {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "SF Pro", sans-serif;
+  font-weight: 800;
+  color: white;
+}
+
+header {
+  display: block grid;
+  grid-template-columns: repeat(auto-fill);
+  block-size: 100px;
+  overflow: hidden;
+  position: sticky;
+  margin: 0;
+  padding: 0;
+  height: 110;
+  padding-left: 16px;
+  padding-right: 6px;
+  min-height: 44px;
+  background-color: #f8f8f8;
+  /* filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.539)); */
+  z-index: 1;
+  border-bottom: 0.5px #d8d8d8 solid;
+}
+
+#logo_header_image_container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+}
+
+.nav {
+  display: flex; /* Flexbox gebruiken */
+  justify-content: flex-end; /* Horizontaal starten (of center als je wilt centreren) */
+  align-items: center; /* Verticaal centreren */
+  height: 100%;
+  margin-right: 50px;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  font-family: "Fragment Mono";
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 100px;
+}
+
+.nav ul li:not(:first-child) {
+  border-left: 1px solid #ccc;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav ul li:first-child {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav a:hover {
+  opacity: 30%;
+  transition: 0.5s ease;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+a.active {
+  font-family: "Fragment Mono";
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 100px;
+}
+
+#chas-logo {
+  height: 15px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: 0.3s ease;
+}
+
+#cloud-logo {
+  height: 15px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: 2s ease-in-out;
+}
+
+nav a:hover #cloud-logo {
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#logo_header_image {
+  height: 80px;
+}
+
+#logo_footer_image {
+  height: 40px;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  flex-direction: column;
+  width: 100%;
+  background-color: black;
+  padding: 20px;
+  padding-top: 30px;
+  border-top: 0.5px #d8d8d8 solid;
+}
+#footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%); /* 2 kolommen van 50% breedte */
+  width: 100%;
+  height: 300px;
+}
+
+#links {
+  grid-column: 1; /* Plaats de #links in de eerste kolom */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-right: 100px;
+}
+
+#links span {
+  font-family: "milker";
+  font-weight: 400;
+  font-size: 40px;
+  animation: flow 3s ease-in-out infinite;
+}
+
+#links span:last-child {
+  font-family: "milker";
+  font-weight: 400;
+  font-size: 75px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+}
+
+#rechts {
+  grid-column: 2; /* Plaats de #rechts in de tweede kolom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  padding-left: 100px;
+  border-left: 0.5px #d8d8d8 solid;
+}
+
+#rechts span {
+  font-weight: 800;
+  font-family: "Fragment Mono";
+}
+#bottom-footer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#bottom-footer span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 400;
+  font-family: "Fragment Mono";
+}
+#social-media {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  height: 50%;
+}
+#logos-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+#logos-container img:hover {
+  opacity: 80%;
+  transition: 0.5s ease;
+}
+
+#also-logos-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 50px;
+  align-items: center;
+}
+#also-logos-container img:hover {
+  opacity: 70%;
+  transition: 0.5s ease;
+}
+.social-logos {
+  height: 20px;
+  color: white;
+}
+
+.also-logos {
+  height: 50px;
+}
+#departments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  height: 50%;
+}
