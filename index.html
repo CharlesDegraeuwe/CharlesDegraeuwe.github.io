@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FrameLab</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/klein.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Dongle&family=Fragment+Mono:ital@0;1&family=Kablammo&family=Monoton&family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/png" href="images/icon.png">
   </head>
   <body>
+
     <header>
       <div id="outer_container_header">
         <div id="logo_header_image_container">
@@ -24,13 +28,14 @@
 
         <nav class="nav">
           <ul>
-           <li><a href="our_work.html">archive</a></li>
+            <li><a href="index.html">home</a></li>
+           <li><a href="our_work.html">work</a></li>
            <li><a href="framecloud/login.html"
             ><img src="images/framecloud.png" id="cloud-logo"
             /></a>
           </li>
 
-            <li><a href="chas.html"
+            <li><a href="archive.html"
               ><img src="images/chas.png" id="chas-logo" />
             </a></li>
             <li><a href="contact.html">contact</a></li>
@@ -38,11 +43,132 @@
         </nav>
     </header>
 
+    <main id="landing">
+
+      <div id="landing-container">
+        <div id="landing-image-container">
+          <img src="sitecontent/diefte.jpeg" alt="landings page image">
+          <div id="landing-image-text">
+            <div class="text-wrapper">
+              <p>FRAMELAB PRODUCTIONS</p>
+              <p>TURNING - MOMENTS - INTO - MOTION</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <section id="what-we-do">
+        <div id="landings-container-title">
+          <span id="landings-title">WHAT WE DO</span>
+        </div>
+        <div id="landings-container-text">
+          <p>Filming to post-production, we handle the entire creative process with care and attention to detail.</p> 
+          <p>Always guided by strong storytelling and visual impact. </p>
+          <p>Clear communication and close collaboration with our clients are at the core of everything we do,</p> 
+          <p>ensuring each project reflects their unique vision.</p>
+        </div>
+      </section>
+
+      <section id="aanbiedingen">
+        <div class="section-title">
+          OUR SERVICES
+        </div>
+        <div id="grid-camera-container">
+          <a href="contact.html">
+          <div class="grid-camera-element">
+            <img src="images/brainstorming.jpg">
+            <div class="title">
+              <img class="title-img" src="images/brain.png">
+              <p class="title-title">Brainstorming</p>
+              <p>Collaborating with you to spark creative ideas and explore unique concepts.</p>
+              <div class="contact-button">
+               
+              </div>
+            
+            </div>
+      
+          </div>
+          </a>
+
+          <a href="contact.html">
+          <div class="grid-camera-element">
+            <img src="images/bmpcc.jpg">
+            <div class="title">
+              <img class="title-img" src="images/cinema.png">
+              <p class="title-title">Production</p>
+              <p>From concept to execution, we handle all aspects of the filming process.</p>
+              <div id="contact-button">
+              </div>
+            </div>
+          </div>
+          </a>
+
+          <a href="contact.html">
+          <div class="grid-camera-element">
+            <img src="images/editing.jpg">
+            <div class="title">
+              <img class="title-img" src="images/editing.png">
+              <p class="title-title">Post-Production & Editing</p>
+              <p>Polishing your footage with seamless editing, color grading, and sound design to ensure the perfect final product.</p>
+              <div id="contact-button" id>
+        
+              </div>
+            </div>
+          </div>
+        </a>
+        </div>
+      </section>
+  
+      <section id="our-work-teaser">
+        <div class="section-title">
+          OUR WORK
+        </div>
+        <div id="our-work-teaser-container">
+          <div class="our-work-teaser-item">
+            <span>DE DIEFTE</span>
+            <span>De Diefte is a Belgian detective-thriller directed by Raf De Graeve, exploring the infamous 1934 theft of the Ghent Altarpiece panels. We contributed as cameraman and editor, capturing and assembling footage for this community-driven film. The project is set to premiere in December 2025 at CC Nova in Wetteren, highlighting local talent and historical storytelling.</span>
+            <a href="our_work.html">
+              VIEW MORE
+          </a>
+          </div>
+          <div class="our-work-teaser-item">
+            <img src="sitecontent/diefte.jpg">
+          </div>
+        </div>
+     
+      </section>
+
+      <section id="who-we-are">
+        <div class="section-title">
+          WHO WE ARE
+        </div>
+        <div id="who-we-are-container">
+        
+          <div id="who-we-are-text-stack">
+        
+            <p>We’ve been working together since 2023, combining our individual skills to create dynamic video content.</p>
+            <p>Lennert is the mastermind behind the filming and camera work, while Charles takes the lead in editing, grading, and post-production.</p>
+            
+
+            <p>Together, we brainstorm and develop concepts for a wide range of projects, including events, weddings, and advertisements.</p>
+            <p>We also collaborate on "CHAS," a project dedicated to capturing the vibrant underground hip-hop scene in Belgium, producing music videos and clips and working together with emerging talent.</p>
+            
+          </div>
+          <div class="photo-stack">
+            <img src="images/charles.jpg" class="photo photo1" />
+            <img src="images/lennert.jpeg" class="photo photo2" />
+            <img src="images/insta 6.jpeg" class="photo photo3" />
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer>
       <div id="footer-container">
         <div id="links">
-          <span>Turning moments</span>
-            <span>into motion</span>
+          <span>Turning moments into</span>
+            <span> motion</span>
           
         </div>
         <div id="rechts">
@@ -73,7 +199,7 @@
         <div id="departments">
           <span id="title">ALSO FRAMELAB:</span>
           <div id="also-logos-container">
-            <a href="chas.html">
+            <a href="archive.html">
               <img src="images/chas-main.png" class="also-logos" />
             </a>
 
@@ -87,7 +213,7 @@
          
       </div>
       <div id="bottom-footer">
-        <a href="index.html">
+        <a href="#landing" class="smooth-scroll">
           <img src="images/logo_wit.png" id="logo_footer_image" />
         </a>
         <span>© FrameLab Productions 2025</span>
@@ -95,5 +221,88 @@
     
       </div>
     </footer>
+    <script>
+
+const scrollSpeed = 600;  // Laag getal is sneller, hoog getal is trager
+
+function smoothScroll(target) {
+  const startPosition = window.pageYOffset; // Huidige scroll positie
+  const targetPosition = target.offsetTop;  // Doel van de scroll
+  const distance = targetPosition - startPosition; // Verschil
+  const startTime = performance.now();
+
+  // Scrollfunctie
+  function scrollAnimation(currentTime) {
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / scrollSpeed, 1); // Zorgt ervoor dat de animatie stopt bij 100%
+
+    window.scrollTo(0, startPosition + distance * progress);
+
+    if (progress < 1) {
+      requestAnimationFrame(scrollAnimation); // Als de scroll niet is voltooid, vraag opnieuw om een frame
+    }
+  }
+
+  requestAnimationFrame(scrollAnimation);
+}
+
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    smoothScroll(targetElement); // Roep de smoothScroll functie aan met het doel
+  });
+});
+      const text = document.getElementById("landing-image-text");
+    
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const speed = 0.4; // pas aan voor sneller/langzamer effect
+        text.style.transform = `translateY(${scrollY * speed}px)`;
+      });
+
+      window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const rotation = scrollY * 0.2; // pas dit getal aan voor sneller/langzamer roteren
+    document.getElementById("logo_header_image").style.transform = `rotate(${rotation}deg)`;
+  });
+
+
+
+        const stack = document.getElementById('photo-stack');
+const photos = Array.from(stack.querySelectorAll('.photo'));
+
+// Rotatie & verschuiving behouden
+photos.forEach((photo, index) => {
+  const angle = -5 + index * (10 / (photos.length - 1));
+  const offset = -10 + index * (20 / (photos.length - 1));
+  photo.style.transform = `rotate(${angle}deg) translate(${offset}px, ${offset}px)`;
+});
+
+// Dynamisch z-index instellen
+let zIndices = photos.map((_, i) => i);
+
+function updateZIndex() {
+  photos.forEach((photo, i) => {
+    photo.style.zIndex = zIndices[i];
+  });
+}
+
+// Startwaarden instellen
+updateZIndex();
+
+// Klik op stack => bovenste naar achter
+stack.addEventListener('click', () => {
+  const top = zIndices.pop(); // verwijder laatste
+  zIndices.unshift(top);      // zet als eerste
+  updateZIndex();
+});
+
+
+    </script>
+    
   </body>
 </html>

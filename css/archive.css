@@ -1,0 +1,362 @@
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SF-Pro-Regular.woff2") format("woff2"),
+    url("/fonts/SF-Pro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DS-Digital";
+  src: url("../fonts/PixelBus.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Milker";
+  src: url("../fonts/MilkerRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral";
+  src: url("../fonts/integral.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fragment-mono-regular {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fragment-mono-regular-italic {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-mono-regular {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 800;
+  color: white;
+  cursor: url("../images/cursor.svg"), auto;
+}
+
+body {
+  background: #000000;
+    background: radial-gradient(
+    circle,
+    rgb(0, 0, 0) 0%,
+    rgba(8, 8, 36, 1) 100%
+  );
+}
+
+main {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: 27.5% 45% 27.5%;
+  height: 95vh;
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+  transition: 1s;
+}
+
+main.hovered {
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 25% 50% 25%;
+  transition: 1s;
+}
+
+main.hovered2 {
+  grid-template-columns: 40% 30% 30%;
+  grid-template-rows: 25% 50% 25%;
+  transition: 1s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+  }
+}
+
+main div {
+  border-left: solid rgb(70, 70, 70) 0.5px;
+  border-bottom: solid rgb(70, 70, 70) 0.5px;
+}
+
+main div:nth-child(1),
+main div:nth-child(4),
+main div:nth-child(7) {
+  border-left: none;
+}
+
+main div:nth-child(7),
+main div:nth-child(8),
+main div:nth-child(9) {
+  border-bottom: none;
+}
+
+main div:nth-child(5) {
+  background: linear-gradient(to right, white 1px, transparent 1px) 0 0,
+    linear-gradient(to right, white 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, white 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, white 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, white 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, white 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, white 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, white 1px, transparent 1px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  display: flex;
+  width: 100%;
+  padding: 1%;
+  object-fit: fill;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+#outerText {
+  border: none;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 5%;
+  padding-right: 10%;
+}
+
+#innerText {
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+main div:nth-child(7) #innerText {
+  justify-content: flex-start;
+}
+
+#innerText span {
+  font-size: 13px;
+  font-weight: 100;
+}
+
+#grey-span-text {
+  color: rgb(145, 145, 145);
+}
+
+.grey-span-text-number {
+  color: rgb(145, 145, 145);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Belangrijk voor absolute positionering van logo */
+  margin: 0;
+  padding: 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  height: 5vh;
+  filter: drop-shadow(0px 10px 20px rgb(0, 0, 0));
+  z-index: 1;
+  filter: invert();
+  background-color: transparent;
+}
+
+/* LOGO CONTAINER CENTREREN */
+#logo_header_image_container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  padding: 5px;
+}
+
+#logo_header_image {
+  height: 40px;
+  transition: transform 0.9s ease-in-out;
+  transform-style: preserve-3d;
+  display: block;
+}
+
+#logo_header_image:hover {
+  transform: rotateY(360deg) rotateX(5deg);
+}
+
+#nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Correct nu */
+  align-items: center;
+  height: 100%;
+}
+
+#nav a {
+  width: 100px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 100;
+  background-size: 0 0;
+  text-decoration: none;
+  transition: background-size 0.1s ease;
+  color: black;
+}
+
+#nav a:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, black 1px, transparent 1px) 0 0,
+    linear-gradient(to right, black 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, black 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, black 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, black 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, black 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, black 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, black 1px, transparent 1px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+}
+
+#nav a:nth-child(2):hover {
+  background: transparent;
+}
+
+video {
+  width: 100%;
+}
+
+#overview-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  gap: 20px;
+}
+.menu-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-item .onderdeel:first-child {
+  position: relative;
+  width: 36px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+/* De tekst in een span zodat het erboven kan blijven */
+.menu-item .onderdeel:first-child span {
+  position: relative;
+  z-index: 2;
+  color: white;
+  transition: color 0.5s ease;
+  font-weight: 100;
+}
+
+/* Background fade effect */
+.menu-item .onderdeel:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+/* Bij hover: fade in background, tekstkleur wordt zwart */
+.menu-item:hover .onderdeel:first-child::before,
+.menu-item.active .onderdeel:first-child::before {
+  transform: scaleX(1);
+}
+
+.menu-item:hover .onderdeel:first-child span,
+.menu-item.active .onderdeel:first-child span {
+  color: black;
+  font-weight: 100;
+}
+
+.onderdeel:last-child {
+  width: 80px;
+  justify-content: flex-end;
+}
+
+.onderdeel {
+  border: none;
+  font-weight: 100;
+  font-size: 13px;
+  text-align: left;
+  width: 200px;
+  cursor: pointer;
+}
+
+/* Actief menu-item krijgt dezelfde stijl als hover */
+.menu-item.active .onderdeel:first-child::before {
+  transform: scaleX(1);
+}
+
+.menu-item.active .onderdeel:first-child span {
+  color: black;
+  font-weight: 100;
+}
+
+main div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+main div:nth-child(3) span {
+  font-family: "Milker";
+  font-weight: 100;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+main div:nth-child(3):hover span {
+  transition: 1s;
+  transform: scaleY(1.3);
+}
+
+#stars {
+  font-weight: 100;
+  font-size: 20px;
+  -webkit-text-stroke: none;
+  color: white;
+}

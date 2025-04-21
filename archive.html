@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/archive.css" />
+    <title>Archive | CHAS</title>
+  </head>
+  <body>
+    <header>
+      <div id="nav">
+        <a href="index.html"> FRMLB-PRD </a>
+        <a href="archive.html">
+          <img src="images/chas.png" id="logo_header_image" />
+        </a>
+        <a href="chas.html">CONTACT</a>
+      </div>
+    </header>
+    <main>
+      <div></div>
+      <div></div>
+      <div>
+        <span>HIPHOP CAPTURED WITH PRECISSION</span>
+      </div>
+      <div id="overview-container">
+        <div
+          class="menu-item"
+          data-video="sitecontent/videos/ondergewaardeerd.mp4"
+        >
+          <div class="onderdeel"><span>[01]</span></div>
+          <div class="onderdeel">ONDERGEWAARDEERD</div>
+          <div class="onderdeel">YUNG MUTTE</div>
+          <div class="onderdeel">02:14</div>
+        </div>
+        <div class="menu-item" data-video="sitecontent/videos/fokt.mp4">
+          <div class="onderdeel"><span>[02]</span></div>
+          <div class="onderdeel">FOKT</div>
+          <div class="onderdeel">WINTER</div>
+          <div class="onderdeel">02:37</div>
+        </div>
+      </div>
+
+      <div>
+        <video id="video-player" autoplay muted playsinline loop>
+          <source
+            id="video-source"
+            src="sitecontent/videos/fokt.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div></div>
+      <div>
+        <div id="outerText">
+          <div id="innerText">
+            <span id="grey-span-text">© 2025</span>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <div>
+        <div id="outerText">
+          <div id="innerText">
+            <span> All [ <span>2</span> ]</span>
+            <span id="grey-span-text">
+              music [ <span class="grey-span-text-number">2</span> ] ads [
+              <span class="grey-span-text-number">0</span> ]</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const video = document.querySelector("video");
+      const main = document.querySelector("main");
+
+      video.addEventListener("mouseenter", () => {
+        main.classList.add("hovered");
+      });
+
+      video.addEventListener("mouseleave", () => {
+        main.classList.remove("hovered");
+      });
+
+      const overview = document.querySelector("#overview-container");
+
+      overview.addEventListener("mouseenter", () => {
+        main.classList.add("hovered2");
+      });
+
+      overview.addEventListener("mouseleave", () => {
+        main.classList.remove("hovered2");
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuItems = document.querySelectorAll(".menu-item");
+        const video = document.getElementById("video-player");
+        const source = document.getElementById("video-source");
+
+        // Selecteer het laatste menu-item en toon de video bij het laden
+        const lastMenuItem = menuItems[menuItems.length - 1];
+        const lastVideoSrc = lastMenuItem.getAttribute("data-video");
+        source.setAttribute("src", lastVideoSrc); // Zet de video naar de laatste
+        video.load(); // Laad de video
+        video.play(); // Speel de video af
+
+        // Voeg de 'active' klasse toe aan het laatste menu-item
+        lastMenuItem.classList.add("active");
+
+        menuItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            const videoSrc = item.getAttribute("data-video"); // Haal het pad op van de video
+
+            if (source.src !== videoSrc) {
+              // Controleer of de nieuwe video anders is dan de huidige
+              source.setAttribute("src", videoSrc); // Zet de nieuwe videobron
+              video.load(); // Laad de nieuwe video
+              video.play(); // Speel de video af
+            }
+
+            // Verwijder de 'active' klasse van alle menu-items en voeg het toe aan de aangeklikte
+            menuItems.forEach((i) => i.classList.remove("active"));
+            item.classList.add("active"); // Markeer het aangeklikte item als actief
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

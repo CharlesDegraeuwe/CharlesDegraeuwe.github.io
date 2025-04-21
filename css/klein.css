@@ -1,0 +1,65 @@
+@media only screen and (max-width: 1000px) {
+  footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    padding-top: 30px;
+    border-top: 0.5px #d8d8d8 solid;
+  }
+  #footer-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  #links {
+    display: none;
+  }
+
+  #rechts {
+    padding-left: 20px;
+    border-left: none;
+  }
+
+  #rechts span {
+    font-weight: 800;
+    text-align: center;
+    font-family: "Fragment Mono";
+  }
+
+  #logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #also-logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 110;
+  }
+
+  #logo_header_image_container {
+    position: relative;
+    background-color: green;
+    left: 0;
+  }
+
+  .nav {
+    justify-content: center; /* Horizontaal starten (of center als je wilt centreren) */
+  }
+}

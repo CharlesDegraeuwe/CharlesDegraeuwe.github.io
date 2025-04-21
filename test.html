@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .stack-container {
+        position: relative; /* Zodat overlay zich hierbinnen positioneert */
+        width: 100%;
+        height: 300px; /* pas aan naar wat jij gebruikt */
+        overflow: hidden;
+      }
+
+      #explosionContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .emoji {
+        position: absolute;
+        font-size: 24px;
+        animation: explode 1s ease-out forwards;
+      }
+
+      @keyframes explode {
+        0% {
+          transform: translate(0, 0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(var(--x), var(--y)) scale(0.5);
+          opacity: 0;
+        }
+      }
+    </style>
+    <div class="grid-item">
+      <div class="stack-container" id="stack">
+        <div id="explosionContainer"></div>
+        <!-- hier komt je bestaande stack-content -->
+      </div>
+    </div>
+
+    <button id="fireButton">🔥</button>
+    <script>
+      const button = document.getElementById("fireButton");
+      const container = document.getElementById("explosionContainer");
+      const emojis = ["🔥", "🔥", "🔥", "🔥", "🔥", "🔥"];
+
+      button.addEventListener("click", () => {
+        for (let i = 0; i < 20; i++) {
+          const emoji = document.createElement("span");
+          emoji.classList.add("emoji");
+          emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+          emoji.style.left = `${Math.random() * 100}%`;
+          emoji.style.top = `${Math.random() * 100}%`;
+
+          const x = `${(Math.random() - 0.5) * 300}px`;
+          const y = `${(Math.random() - 0.5) * 300}px`;
+          emoji.style.setProperty("--x", x);
+          emoji.style.setProperty("--y", y);
+
+          container.appendChild(emoji);
+
+          setTimeout(() => emoji.remove(), 1000);
+        }
+      });
+    </script>
+  </body>
+</html>
