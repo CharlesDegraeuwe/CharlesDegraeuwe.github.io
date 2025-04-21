@@ -1,0 +1,14 @@
+section {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+#contact-info-container {
+  border-radius: 10%;
+  background-color: green;
+  padding: 10%;
+  padding-top: 3%;
+}
