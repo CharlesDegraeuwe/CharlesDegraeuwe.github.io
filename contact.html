@@ -13,7 +13,15 @@
       href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Dongle&family=Fragment+Mono:ital@0;1&family=Kablammo&family=Monoton&family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5R7RKYTHJ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-X5R7RKYTHJ');
+      </script>
   </head>
   <body>
     <header>
@@ -41,17 +49,57 @@
         </nav>
     </header>
       <section>
-        <div id="contact-info-container">
-          <div id="contact info">
-            <div id="contact-info-item">
-              <a href="tel:32493835481">+32 49 38 35 481</a>
+        <div id="contact-outer-info-container">
+          <div id="contact-inner-info-container">
+            <div class="contact-vak">
+              <form action="https://formsubmit.co/framelabproductions@gmail.com" method="POST">
+                <input type="text" placeholder="Name" name="name" required class="contact-input-form">
+                <input type="email" placeholder="E-mail" name="email" required class="contact-input-form">
+                <textarea name="message" placeholder="Message" required ></textarea>
+                <button type="submit" id="submit-button"><span>submit</span></button>
+           </form> 
             </div>
-            <div id="contact-info-item">
-              <a href="mailto:framelabproductions@gmail.com">framelabproductions@gmail.com
+            <div class="contact-vak">
+            <div class="contact-info-item">
+              <h2>Contact</h2>
+              <a href="mailto:framelabproductions@gmail.com"><span>framelabproductions@gmail.com</span>
               </a>
+             
+            </div>
+            <div class="contact-info-item">
+              <h2>Based In</h2>
+             <a href="https://maps.app.goo.gl/Xyskc3zfxb3G2YFX9"><span>Ghent</span></a>
+             <span>East Flanders</span>
+            </div>
+
+            <div class="contact-info-item">
+                <h2>Follow Us</h2>
+                      <div id="logos-container">
+                        <a href="https://www.instagram.com/framelabs.production/">
+                          <img src="images/svgs/instagram.svg" class="social-logos" />
+                        </a>
+      
+                        <a href="https://www.youtube.com/@chas7366">
+                          <img src="images/svgs/youtube-app-white-icon.svg" class="social-logos">
+                        </a>
+      
+                        <a href="https://tiktok.com">
+                          <img src="images/svgs/tiktok.svg" class="social-logos">
+                        </a>
+      
+                        <a href="https://linkedin.com">
+                          <img src="images/svgs/linked.svg" class="social-logos">
+                        </a>
+      
+                        <!-- <a href="mailto:framelabproductions@gmail.com">
+                          <img src="images/svgs/mail.svg" class="social-logos">
+                        </a> -->
+              </div>
             </div>
             <div id="contact-info-item"></div>
+            </div>
 
+            
           </div>
         </div>
       </section>
@@ -113,4 +161,30 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // voorkom redirect
+  
+      const form = event.target;
+      const formData = new FormData(form);
+  
+      fetch("https://formsubmit.co/framelabproductions@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          form.style.display = "none";
+          document.getElementById("thank-you").style.display = "block";
+        } else {
+          alert("Er ging iets mis. Probeer opnieuw.");
+        }
+      });
+    });
+  </script>
+  
 </html>

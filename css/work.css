@@ -1,10 +1,9 @@
 @import "styles.css";
 .work {
   padding: 20px;
-}
-
-.work {
-  height: 47.6vh;
+  z-index: 0;
+  margin-top: 10vh;
+  background-color: green;
 }
 
 .grid-container {

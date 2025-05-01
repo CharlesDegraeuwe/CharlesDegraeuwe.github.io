@@ -199,6 +199,7 @@ footer {
   padding: 20px;
   padding-top: 30px;
   border-top: 0.5px #d8d8d8 solid;
+  z-index: 10;
 }
 #footer-container {
   display: grid;
@@ -317,6 +318,7 @@ footer {
 .also-logos {
   height: 50px;
 }
+
 #departments {
   display: flex;
   flex-direction: column;
@@ -340,6 +342,7 @@ main {
     opacity: 1;
   }
 }
+
 #landing-container {
   flex-shrink: 0; /* Zorg ervoor dat het niet krimpt */
   width: 100%;

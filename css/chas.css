@@ -275,7 +275,8 @@ main {
 .stack-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 4;
+
+  height: 100%;
   perspective: 1000px;
   overflow: visible;
 }
