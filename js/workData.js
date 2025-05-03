@@ -12,8 +12,8 @@ window.works = [
     "De Diefte",
     "Movie",
     "2025",
-    "De Diefte is a Belgian feature film directed by Raf De Graeve, exploring the 1934 theft of the 'Just Judges' panel from the Ghent Altarpiece. Blending historical facts with fiction, the story follows Hubert, a man uncovering his grandfather's ties to the infamous art heist. Shot in Wetteren with local talent, the film premieres on December 12, 2025, at CC Nova",
-    "https://www.youtube.com/watch?v=QZgxj8_8Vlg",
+    "De Diefte is a Belgian feature film directed by Raf De Graeve, exploring the 1934 theft of the 'Just Judges' panel from the Ghent Altarpiece. Blending historical facts with fiction, the story follows Hubert, a man uncovering his grandfather's ties to the infamous art heist.",
+    "",
   ],
   [
     "3",
@@ -21,7 +21,7 @@ window.works = [
     "Advertisement",
     "2022",
     "This spec commercial for Crodino marks our first exercise in product promotion and visual storytelling. From lighting and styling to camera movement and color grading, every detail was crafted to highlight the product's refreshing character and premium feel. While not an official ad, this project demonstrates our creative approach and technical skills in commercial filmmaking.",
-    "https://youtu.be/NRXTWbl0PDc",
+    "https://www.youtube.com/watch?v=NRXTWbl0PDc",
   ],
   [
     "4",
@@ -29,7 +29,7 @@ window.works = [
     "Advertisement",
     "2023",
     "This aerial reel highlights our drone cinematography capabilities — capturing dynamic perspectives, smooth tracking shots, and cinematic landscapes. Whether for events, real estate, or commercial projects, we offer high-quality drone footage to elevate any production. Drone services are now part of our full videography offering.",
-    "https://youtu.be/O5JJyzwZ4Y8",
+    "https://www.youtube.com/watch?v=O5JJyzwZ4Y8",
   ],
   [
     "5",
@@ -37,6 +37,6 @@ window.works = [
     "Wedding",
     "2024",
     "This cinematic wedding film captures the love and joy of Connie & Bernard’s special day. From emotional vows to vibrant celebrations, we documented every moment with care and storytelling in mind. Weddings are part of our videography services — we’re here to turn your day into a timeless film.",
-    "https://youtu.be/8Y7KrIOjGI4",
+    "https://www.youtube.com/watch?v=8Y7KrIOjGI4",
   ],
 ];

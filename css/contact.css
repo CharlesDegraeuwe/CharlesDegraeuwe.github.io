@@ -4,6 +4,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 5%;
+  padding-top: 0;
 }
 
 *:focus {

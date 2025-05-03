@@ -160,6 +160,7 @@ h4 {
   background-color: none;
   border-radius: 20px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 footer {
