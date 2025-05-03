@@ -13,7 +13,7 @@ window.works = [
     "Movie",
     "2025",
     "De Diefte is a Belgian feature film directed by Raf De Graeve, exploring the 1934 theft of the 'Just Judges' panel from the Ghent Altarpiece. Blending historical facts with fiction, the story follows Hubert, a man uncovering his grandfather's ties to the infamous art heist.",
-    "",
+    "https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/489147588_122151170168571096_8613332434549729350_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=f727a1&_nc_ohc=Mjr1PChKbCEQ7kNvwHjPBu5&_nc_oc=Adlu1wVXIovQR2kUuocSkvkly1YzDh6GyqUHMu6pg8cBcMJUf8-7s7s2m0TPCzGHrxQMnynhV2-UrxFZj3X7IS2t&_nc_zt=23&_nc_ht=scontent-bru2-1.xx&_nc_gid=KEMx7W4yX9AuVM7LsfK6SQ&oh=00_AfE2Aa-Uv_cZbZT7Dk63Td5gh2-7XRKLTUWgmw1jdfQxvw&oe=681C4D57",
   ],
   [
     "3",

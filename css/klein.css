@@ -1,64 +1,108 @@
 @media only screen and (max-width: 1500px) {
-
   #logo_header_image_container {
     display: none;
   }
-  
+
   .nav {
     justify-content: center; /* Horizontaal starten (of center als je wilt centreren) */
+    margin-right: 0px;
+    width: 100%;
   }
 }
 
-
+/* Mobile responsiveness */
 @media only screen and (max-width: 1000px) {
-  
-  #logo_header_image_container {
-    display: none;
-  }
-  
-  .nav {
-    justify-content: center; /* Horizontaal starten (of center als je wilt centreren) */
+  header {
+    height: 80px;
+    padding: 0 12px;
+    backdrop-filter: none;
   }
 
-  #landings-title {
-    font-size: 1rem;
+  .nav {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .nav a::after {
+    position: relative;
+  }
+
+  nav a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .nav ul {
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #ececec;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 0 8px;
+  }
+
+  .nav ul li:not(:first-child) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .nav ul li a {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .nav ul li:first-child {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  #chas-logo,
+  #cloud-logo {
+    height: 12px;
+  }
+
+  #logo_header_image {
+    height: 60px;
+  }
+
+  main {
+    margin-top: -80px;
   }
 
   #landing-image-text p:first-child {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
-  
+
+  #landing-image-text p:last-child {
+    font-size: 1.2rem;
+  }
+
+  #landings-title {
+    font-size: 2.5rem;
+  }
+
   #landings-container-text p {
-   font-size: 10px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 90%;
   }
 
-  .section-title {
-    font-size: 2.2rem;
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
+  #grid-camera-container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 16px;
+    padding: 16px;
   }
 
-
-
-#landings-container-text span {
-  font-size: 10px;
-}
-
-#landings-title {
-  font-size: 3rem;
-}
-
-  .grid-camera-element img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Verfijnde overgang voor afbeelding */
-    filter: grayscale(100%); /* Zet een standaard grayscale filter */
+  .grid-camera-element {
+    height: 40vh;
+    border-radius: 20px;
+    position: relative; /* nodig voor absolute positionering van .title */
+    overflow: hidden;
   }
-  
-  
-  .grid-camera-element:hover .title {
+
+  .grid-camera-element .title {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -68,202 +112,150 @@
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10%;
-    opacity: 0;
+    color: white;
+
+    height: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Milker";
+    padding: 10px;
+    opacity: 1;
     text-align: center;
     transform: translateY(20px); /* Begin iets lager */
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
-  .grid-camera-element:hover .title {
-    opacity: 1;
-    transform: translateY(0); /* Maak de titel zichtbaar door omhoog te bewegen */
+
+  .grid-camera-element img {
+    opacity: 40%;
   }
-  
   .title-title {
-    opacity: 1;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: "Milker";
-    margin-bottom: 2%;
-  }
-  
-  .title:hover img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    padding-top: 10px;
-    opacity: 100%;
-    color: white;
-    overflow: visible;
-    margin-bottom: 5%;
-  }
-  
-  .title img {
-    width: 0px;
-    opacity: 0%;
-  }
-  
-  .title:hover p:last-of-type {
     font-size: 1.5rem;
-    gap: 0;
-    font-family: "Nunito";
   }
-  
-  #who-we-are {
+
+  .title:hover p:last-of-type {
+    font-size: 1rem;
+  }
+
+  #who-we-are-container {
     flex-direction: column;
-
+    padding: 16px;
   }
 
+  #who-we-are-container div {
+    width: 100%;
+  }
 
-#who-we-are-container {
-  display: flex;
-  flex-direction: column;
-  padding-left: 5%;
-  padding-right: 5%;
-  gap: 5%;
-}
-#who-we-are-container div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-#who-we-are-text-stack {
-  flex-direction: column;
-  height: 100%;
-  align-items: flex-start;
-  padding-top: 1%;
-  padding-bottom: 3%;
-  font-size: 1.5rem;
-  font-family: "Fragment Mono";
-}
+  #who-we-are-text-stack {
+    font-size: 1rem;
+    padding-top: 8px;
+  }
 
   #who-we-are-text-stack p {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-weight: 800;
     font-size: 1rem;
-    font-family: "Nunito";
-    line-height: 2rem;
-    color: rgb(180, 180, 180);
+    line-height: 1.5rem;
   }
 
   .photo-stack {
-    position: relative;
-    width: 100%; /* pas aan aan je foto's */
-    height: 40vh;
-    z-index: 0;
-    margin-bottom: 5%;
+    height: 30vh;
   }
-  
+
   .photo {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    width: 70%;
   }
-  
-  .photo1 {
-    transform: rotate(-5deg) translate(-10px, -10px);
-    z-index: 1;
-    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.539));
-    transition: 1s ease;
+
+  #our-work-teaser-container {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+    gap: 20px;
   }
-  
-  .photo2 {
-    transform: rotate(0deg);
-    z-index: 2;
-    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.539));
-    transition: 1s ease;
+
+  .our-work-teaser-item {
+    width: 100%;
+    height: 50vh;
+    padding: 16px;
   }
-  
-  .photo3 {
-    transform: rotate(5deg) translate(10px, 10px);
-    z-index: 3;
-    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.539));
-    transition: z-index 1s ease;
+
+  .our-work-teaser-item span {
+    font-size: 1.5rem;
   }
-  
-  .photo:hover {
+
+  .our-work-teaser-item span:nth-child(2) {
+    font-size: 1rem;
+    padding-bottom: 16px;
+  }
+
+  .our-work-teaser-item a {
+    padding: 8px 16px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    padding: 16px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    padding-top: 30px;
+    border-top: 0.5px #d8d8d8 solid;
     z-index: 10;
   }
-  #our-work-teaser-container {
-    height: 60vh;
+
+  #footer-container {
     display: flex;
-    flex-direction: row;
-    padding: 5%;
-    padding-top: 1%;
-    gap: 5%;
-  }
-  
-  .our-work-teaser-item {
-    display: flex;
-    height: 100%;
-    width: 50%;
-    background-color: #eeebeb;
-    border-radius: 30px;
-    padding: 3%;
     flex-direction: column;
-    overflow: hidden;
-    align-items: center; /* Center the content inside the item */
-  }
-  
-  .our-work-teaser-item:nth-child(2) {
-    padding: 0;
-  }
-  
-  .our-work-teaser-item a {
-    padding: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #d8d8d8;
-    height: fit-content;
-    width: fit-content;
-    text-decoration: none;
-    font-family: "Nunito";
-    border-radius: 15px;
-    transition: 1s;
-    color: black;
-    text-align: center;
-    align-self: center; /* Ensure the link is centered */
-  }
-  
-  .our-work-teaser-item img {
-    object-fit: fill;
     width: 100%;
-    transition: 1s;
-    cursor: default;
+    height: 300px;
   }
-  
-  .our-work-teaser-item img:hover {
-    transform: scale(1.1);
-    transition: 1s;
+
+  #links {
+    padding: 16px;
+    grid-column: auto;
   }
-  
-  .our-work-teaser-item span {
-    padding-bottom: 1rem;
-    font-family: "Milker";
-    font-size: 2rem;
-    color: black;
+
+  #links span {
+    font-size: 32px;
   }
-  
-  .our-work-teaser-item span:nth-child(2) {
-    font-family: "Nunito";
-    font-size: 1.5rem;
-    color: #b5b5b5;
-    padding-bottom: 5rem;
+
+  #links span:last-child {
+    font-size: 48px;
   }
-  
-  .our-work-teaser-item a:hover {
-    background-color: white;
-    transition: 1s;
+
+  #rechts {
+    padding: 16px;
+    border-left: none;
+    border-top: 0.5px #d8d8d8 solid;
+    align-items: center;
   }
-  
+
+  #social-media,
+  #departments {
+    align-items: center;
+  }
+
+  #logos-container,
+  #also-logos-container {
+    justify-content: center;
+  }
+
+  .social-logos {
+    height: 16px;
+  }
+
+  .also-logos {
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  #bottom-footer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

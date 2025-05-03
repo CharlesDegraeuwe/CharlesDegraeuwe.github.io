@@ -58,11 +58,7 @@
 
 body {
   background: #000000;
-    background: radial-gradient(
-    circle,
-    rgb(0, 0, 0) 0%,
-    rgba(8, 8, 36, 1) 100%
-  );
+  background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgba(8, 8, 36, 1) 100%);
 }
 
 main {
@@ -246,7 +242,7 @@ header {
 }
 
 video {
-  width: 100%;
+  width: 80%;
 }
 
 #overview-container {
