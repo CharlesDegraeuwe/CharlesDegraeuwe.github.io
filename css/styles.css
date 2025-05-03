@@ -357,6 +357,7 @@ main {
 #landing-image-container {
   top: 0;
   height: 100%;
+  width: 100%;
   position: relative;
   background-color: black;
   animation: fadeIn 1s forwards;
@@ -365,12 +366,12 @@ main {
 #landing-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
+  object-fit: cover; /* of: contain, fill — zie uitleg hieronder */
   display: block;
+  filter: grayscale(100%);
   animation: flow-in-background 3s forwards;
   will-change: transform;
-  transition: transform 0.1s ease-out; /* Zachte overgang */
+  transition: transform 0.1s ease-out;
 }
 
 #landing-image-text {
@@ -410,7 +411,7 @@ main {
   }
 
   to {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 #landing-image-text p:first-child {
@@ -708,8 +709,8 @@ main {
 }
 
 .our-work-teaser-item img {
-  object-fit: fill;
-  width: 100%;
+  object-fit: cover;
+  height: 100%;
   transition: 1s;
   cursor: default;
 }
