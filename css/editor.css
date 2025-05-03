@@ -1,0 +1,39 @@
+#editor-section {
+  padding: 20px;
+  text-align: center;
+}
+
+#password-prompt,
+#editor-form {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+#editor-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+#editor-form input,
+#editor-form textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+#editor-form textarea {
+  height: 100px;
+}
+
+#editor-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#editor-form button:hover {
+  background-color: #555;
+}

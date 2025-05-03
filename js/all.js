@@ -2,13 +2,15 @@ class Work {
   #id;
   #titel;
   #genre;
+  #datum;
   #tekst;
   #iframe;
 
-  constructor(id, titel, genre, tekst, iframe) {
+  constructor(id, titel, genre, datum, tekst, iframe) {
     this.#id = id;
     this.#titel = titel;
     this.#genre = genre;
+    this.#datum = datum;
     this.#tekst = tekst;
     this.#iframe = iframe;
   }
@@ -21,6 +23,10 @@ class Work {
   }
   get genre() {
     return this.#genre;
+  }
+
+  get datum() {
+    return this.#datum;
   }
   get tekst() {
     return this.#tekst;
@@ -38,8 +44,8 @@ class WorkRepository {
     console.log(this.#works);
   }
 
-  #voegWorkToe(id, titel, genre, tekst, iframe) {
-    this.#works.push(new Work(id, titel, genre, tekst, iframe));
+  #voegWorkToe(id, titel, genre, datum, tekst, iframe) {
+    this.#works.push(new Work(id, titel, genre, datum, tekst, iframe));
   }
 
   geefWork(id) {
@@ -47,8 +53,8 @@ class WorkRepository {
   }
 
   #haalWorkOp() {
-    window.works.forEach(([id, titel, genre, tekst, iframe]) =>
-      this.#voegWorkToe(id, titel, genre, tekst, iframe)
+    window.works.forEach(([id, titel, genre, datum, tekst, iframe]) =>
+      this.#voegWorkToe(id, titel, genre, datum, tekst, iframe)
     );
   }
 
@@ -143,7 +149,7 @@ class workComponent {
 
     const jaarVak = document.createElement("span");
     jaarVak.id = "jaar-vak";
-    jaarVak.textContent = "2025";
+    jaarVak.textContent = w.datum;
 
     genreLine.appendChild(genreVak);
     genreLine.appendChild(separator);
