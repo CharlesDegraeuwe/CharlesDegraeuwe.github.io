@@ -258,4 +258,57 @@
     justify-content: center;
     align-items: center;
   }
+
+  .cookie-consent {
+    width: 90%;
+    height: 30%;
+  }
+
+  .cookie-consent p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: "Nunito";
+    color: black;
+  }
+
+  .cookie-consent .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .cookie-consent button {
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Milker";
+    transition: background-color 0.3s;
+    transition: 0.5s linear;
+  }
+
+  .cookie-consent button:hover {
+    transform: scale(1.05);
+    transition: 0.5s linear;
+  }
+  .cookie-consent .accept {
+    background-color: #ffffff;
+    color: black;
+  }
+
+  .cookie-consent .accept:hover {
+    background-color: #ffffff;
+  }
+
+  .cookie-consent .decline {
+    background-color: black;
+    color: white;
+  }
+
+  .cookie-consent .decline:hover {
+    background-color: black;
+  }
 }
