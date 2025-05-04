@@ -1,0 +1,151 @@
+@media (max-width: 768px) {
+  * {
+    cursor: default; /* Remove custom cursor for touch devices */
+  }
+
+  body {
+    background: radial-gradient(
+      circle,
+      rgb(0, 0, 0) 0%,
+      rgba(8, 8, 36, 1) 100%
+    );
+  }
+
+  header {
+    padding: 2%;
+    height: 8vh;
+    background-color: transparent;
+  }
+
+  #logo_header_image_container {
+    padding: 3px;
+  }
+
+  #logo_header_image {
+    height: 30px;
+  }
+
+  #nav {
+    justify-content: space-around;
+  }
+
+  #nav a {
+    width: 80px;
+    font-size: clamp(0.8rem, 3vw, 0.9rem);
+    padding: 2px;
+  }
+
+  main {
+    height: 92vh;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    grid-template-rows: auto;
+  }
+
+  main.hovered,
+  main.hovered2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  main div {
+    border: none; /* Remove borders for cleaner look */
+    padding: 4%;
+  }
+
+  main div:nth-child(1),
+  main div:nth-child(2),
+  main div:nth-child(3),
+  main div:nth-child(6),
+  main div:nth-child(7),
+  main div:nth-child(8) {
+    display: none; /* Hide specified grid items */
+  }
+
+  main div:nth-child(4),
+  main div:nth-child(5),
+  main div:nth-child(9) {
+    display: flex; /* Ensure visible grid items are flex for content alignment */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 20vh; /* Ensure enough space */
+  }
+
+  main div:nth-child(5) {
+    width: 100%; /* Full width for the fifth grid item */
+    background-size: 25px 25px; /* Adjust background size for mobile */
+    padding: 2%;
+  }
+
+  video {
+    width: 90%;
+    max-height: 50vh; /* Prevent video from taking too much space */
+  }
+
+  #outerText {
+    padding: 3%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  #innerText {
+    gap: 20px;
+    flex-direction: column; /* Stack items for mobile */
+    width: 100%;
+  }
+
+  #innerText span {
+    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+    color: white; /* Ensure text visibility */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1.5%;
+    height: 10vh;
+  }
+
+  #logo_header_image {
+    height: 25px;
+  }
+
+  #nav a {
+    width: 60px;
+    font-size: clamp(0.7rem, 3.5vw, 0.8rem);
+  }
+
+  main div:nth-child(5) {
+    padding: 3%;
+  }
+
+  video {
+    width: 95%;
+    max-height: 40vh;
+  }
+
+  #outerText {
+    padding: 2%;
+  }
+
+  #innerText {
+    gap: 15px;
+  }
+
+  #innerText span {
+    font-size: clamp(0.6rem, 2.5vw, 0.7rem);
+  }
+}
+body {
+  background: linear-gradient(
+    to top,
+    rgba(8, 8, 36, 1) 0%,
+    rgb(0, 0, 0) 33%,
+    rgb(0, 0, 0) 66%,
+    rgba(8, 8, 36, 1) 100%
+  );
+}

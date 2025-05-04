@@ -179,6 +179,9 @@ main {
   width: 50%;
 }
 
+.grid-item:nth-child(6) #social-media {
+  display: none;
+}
 #img {
   display: flex;
   align-items: center;

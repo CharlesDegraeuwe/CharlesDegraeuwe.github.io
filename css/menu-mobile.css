@@ -1,0 +1,102 @@
+@media (max-width: 768px) {
+  #overview-container {
+    display: flex !important; /* Force display */
+    flex-direction: column;
+    padding: 5%;
+    gap: 1rem;
+    width: 100%; /* Ensure container has sufficient height */
+    box-sizing: border-box;
+    visibility: visible !important; /* Force visibility */
+    align-items: flex-start; /* Align menu items to the left */
+    height: 10vh;
+  }
+  .menu-item {
+    display: flex !important; /* Force display */
+    flex-direction: row;
+    justify-content: flex-start; /* Align all items from start */
+    align-items: center; /* Center items vertically */
+    gap: 0.1rem; /* Reduced gap for tighter alignment */
+    /* Consistent padding */
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    visibility: visible !important; /* Force visibility */
+    height: 0.25rem;
+  }
+
+  .menu-item .onderdeel:first-child {
+    width: 2rem !important; /* Fixed width for consistency */
+    margin-right: 0.25rem !important; /* Reduced margin */
+    overflow: visible !important;
+    display: flex;
+    align-items: center; /* Center span vertically */
+  }
+
+  .menu-item:hover .onderdeel:first-child span,
+  .menu-item.active .onderdeel:first-child span {
+    color: black;
+  }
+
+  .onderdeel {
+    font-size: clamp(0.7rem, 2.5vw, 0.8rem) !important;
+    width: auto !important; /* Allow content to determine width */
+    flex: 1 1 auto; /* Distribute space evenly with flexibility */
+
+    color: black; /* Debug: Yellow text */
+    font-weight: 100;
+    text-align: left;
+    font-family: "Roboto Mono", monospace, sans-serif !important; /* Fallback font */
+    display: flex !important;
+    align-items: center; /* Center text vertically */
+    line-height: 1; /* Ensure text fits nicely */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  .onderdeel:last-child {
+    width: 3rem !important; /* Fixed width for consistency */
+    flex: 0 0 3rem !important; /* Fixed width with no flexibility */
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center; /* Center text vertically */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+    gap: 0.1rem; /* Reduced gap for smaller screens */
+    padding: 0.1rem 0;
+    min-height: 1.75rem; /* Adjusted minimum height */
+  }
+
+  .menu-item .onderdeel:first-child {
+    width: 1.5rem !important; /* Fixed width for consistency */
+    margin-right: 0.1875rem !important; /* Reduced margin */
+  }
+
+  .menu-item .onderdeel:first-child span {
+    font-size: clamp(0.6rem, 2.5vw, 0.7rem) !important;
+    color: white !important; /* Debug: Yellow text */
+    font-family: "Roboto Mono", monospace, sans-serif !important; /* Fallback font */
+  }
+
+  .menu-item:hover .onderdeel:first-child span,
+  .menu-item.active .onderdeel:first-child span {
+    color: black !important;
+  }
+
+  .onderdeel {
+    font-size: clamp(0.6rem, 2.5vw, 0.7rem) !important;
+    width: auto !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    color: white !important; /* Debug: Yellow text */
+    font-family: "Roboto Mono", monospace, sans-serif !important; /* Fallback font */
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .onderdeel:last-child {
+    width: 2.5rem !important; /* Fixed width for consistency */
+    flex: 0 0 2.5rem !important; /* Fixed width with no flexibility */
+  }
+}
