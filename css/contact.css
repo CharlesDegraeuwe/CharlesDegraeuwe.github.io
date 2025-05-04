@@ -7,6 +7,10 @@ section {
   padding-top: 0%;
 }
 
+*:focus {
+  outline: none;
+}
+
 h2 {
   font-family: "Fragment Mono";
   font-weight: 800;
