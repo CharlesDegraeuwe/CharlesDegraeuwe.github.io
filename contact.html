@@ -165,26 +165,25 @@
       </div>
     </footer>
     <script>
-      document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // voorkom redirect
-        const form = event.target;
-        const formData = new FormData(form);
-        fetch("https://formsubmit.co/framelabproductions@gmail.com", {
-          method: "POST",
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        }).then(response => {
-          if (response.ok) {
-            form.reset();
-            form.style.display = "none";
-            document.getElementById("thank-you").style.display = "block";
-          } else {
-            alert("Er ging iets mis. Probeer opnieuw.");
-          }
-        });
-      });
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // voorkom redirect
+  const form = event.target;
+  const formData = new FormData(form);
+  fetch("https://formsubmit.co/framelabproductions@gmail.com", {
+    method: "POST",
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      location.reload(); // herlaad de pagina volledig
+    } else {
+      alert("Er ging iets mis. Probeer opnieuw.");
+    }
+  });
+});
+
     </script>
   </body>
 </html>
