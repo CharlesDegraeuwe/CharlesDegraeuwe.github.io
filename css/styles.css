@@ -204,7 +204,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 50%); /* 2 kolommen van 50% breedte */
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 
 #links {
@@ -312,10 +312,12 @@ footer {
 .social-logos {
   height: 20px;
   color: white;
+  cursor: pointer;
 }
 
 .also-logos {
   height: 50px;
+  cursor: pointer;
 }
 
 #departments {
