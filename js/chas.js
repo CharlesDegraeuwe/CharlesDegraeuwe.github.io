@@ -2,11 +2,13 @@ const images = [
   "sitecontent/yung-mutte2.png",
   "sitecontent/foto.jpeg",
   "sitecontent/yung-mutte1.png",
+  "sitecontent/carousel7.JPG",
   "sitecontent/fokt.jpeg",
   "sitecontent/carousel1.jpeg",
   "sitecontent/carousel2.jpeg",
   "sitecontent/thumbnail.jpeg",
   "sitecontent/carousel6.jpeg",
+  "sitecontent/carousel8.jpg",
 ];
 
 let index = 0;
